@@ -10,47 +10,46 @@ export function Footer() {
               Allure<span className="text-oxide">.</span>
             </h3>
             <p className="mt-6 max-w-md text-cream/70 text-sm leading-relaxed">
-              An editorial real estate practice — curating residences, estates,
-              and sanctuaries that read like architecture in print.
+              Dependable Property Management and Community Association services defined by
+              integrity, transparency, and over 19 years of excellence.
             </p>
           </div>
 
           <div className="md:col-span-2">
-            <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-gold mb-5">Pages</p>
-            <ul className="space-y-3 text-sm">
+            <p className="font-mono text-xs uppercase tracking-[0.35em] text-gold mb-6">Pages</p>
+            <ul className="space-y-4 text-sm font-medium">
               <li><Link to="/" className="ed-link">Index</Link></li>
-              <li><Link to="/about" className="ed-link">About</Link></li>
               <li><Link to="/services" className="ed-link">Services</Link></li>
-              <li><Link to="/properties" className="ed-link">Properties</Link></li>
+              <li><Link to="/about" className="ed-link">About</Link></li>
               <li><Link to="/contact" className="ed-link">Contact</Link></li>
             </ul>
           </div>
 
           <div className="md:col-span-2">
-            <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-gold mb-5">Studio</p>
+            <p className="font-mono text-xs uppercase tracking-[0.35em] text-gold mb-6">Offices</p>
             <ul className="space-y-3 text-sm text-cream/80">
-              <li>87 Greene Street</li>
-              <li>SoHo, New York</li>
-              <li>NY 10012</li>
+              <li>PO Box 364</li>
+              <li>Hamburg, NJ 07419</li>
+              <li>USA</li>
             </ul>
           </div>
 
           <div className="md:col-span-2">
-            <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-gold mb-5">Contact</p>
+            <p className="font-mono text-xs uppercase tracking-[0.35em] text-gold mb-6">Contact</p>
             <ul className="space-y-3 text-sm text-cream/80">
-              <li>hello@allure.estate</li>
-              <li>+1 (212) 555 — 0144</li>
-              <li className="ed-link inline-block">Instagram</li>
+              <li>manager@allurepropertiesgroup.com</li>
+              <li>973.823.0593 | Fax: 973.209.0257</li>
+              <li>Emergency (24/7): 888.245.2440</li>
             </ul>
           </div>
         </div>
 
-        <div className="mt-20 pt-8 border-t border-cream/10 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-          <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-cream/50">
-            © {new Date().getFullYear()} Allure Properties Group — Issue No. 14
+        <div className="mt-24 pt-10 border-t border-cream/10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <p className="font-mono text-xs uppercase tracking-[0.35em] text-cream/50">
+            © {new Date().getFullYear()} Allure Properties Group — MMXXV
           </p>
-          <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-cream/50">
-            Crafted with quiet rigor.
+          <p className="font-mono text-xs uppercase tracking-[0.35em] text-cream/50">
+            GAAP-Compliant Quality Management.
           </p>
         </div>
       </div>

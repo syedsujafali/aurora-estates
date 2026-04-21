@@ -14,7 +14,7 @@ export function useReveal<T extends HTMLElement = HTMLElement>(threshold = 0.15)
           }
         });
       },
-      { threshold, rootMargin: "0px 0px -10% 0px" }
+      { threshold, rootMargin: "0px 0px -10% 0px" },
     );
     io.observe(el);
     return () => io.disconnect();
@@ -22,7 +22,9 @@ export function useReveal<T extends HTMLElement = HTMLElement>(threshold = 0.15)
   return ref;
 }
 
-export function useRevealAll(selector = ".reveal, .reveal-left, .reveal-right, .reveal-zoom, .reveal-fade") {
+export function useRevealAll(
+  selector = ".reveal, .reveal-left, .reveal-right, .reveal-zoom, .reveal-fade",
+) {
   useEffect(() => {
     const els = document.querySelectorAll<HTMLElement>(selector);
     const io = new IntersectionObserver(
@@ -34,7 +36,7 @@ export function useRevealAll(selector = ".reveal, .reveal-left, .reveal-right, .
           }
         });
       },
-      { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
+      { threshold: 0.12, rootMargin: "0px 0px -8% 0px" },
     );
     els.forEach((el) => io.observe(el));
     return () => io.disconnect();

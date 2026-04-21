@@ -112,6 +112,8 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
   }
@@ -119,9 +121,9 @@
     font-family: var(--font-display);
     font-weight: 400;
     letter-spacing: -0.02em;
-    line-height: 0.95;
+    line-height: 1.1;
   }
-  ::selection { background: var(--oxide); color: var(--cream); }
+  ::selection { background: var(--gold); color: var(--gold-foreground); }
 }
 
 @layer utilities {

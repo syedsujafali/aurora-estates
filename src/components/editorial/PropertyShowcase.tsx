@@ -8,13 +8,20 @@ interface Property {
 
 export function PropertyCard({ p, size = "md" }: { p: Property; size?: "sm" | "md" | "lg" }) {
   const h =
-    size === "lg" ? "h-[70vh] md:h-[85vh]" :
-    size === "md" ? "h-[55vh] md:h-[65vh]" :
-    "h-[40vh] md:h-[45vh]";
+    size === "lg"
+      ? "h-[70vh] md:h-[85vh]"
+      : size === "md"
+        ? "h-[55vh] md:h-[65vh]"
+        : "h-[40vh] md:h-[45vh]";
   return (
     <article className="ed-card group">
       <div className={`ed-image relative ${h}`}>
-        <img src={p.image} alt={p.title} loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
+        <img
+          src={p.image}
+          alt={p.title}
+          loading="lazy"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
         {p.tag && (
           <span className="absolute top-5 left-5 z-10 font-mono text-[10px] uppercase tracking-[0.3em] bg-cream text-charcoal px-3 py-1.5">
             {p.tag}
@@ -22,7 +29,9 @@ export function PropertyCard({ p, size = "md" }: { p: Property; size?: "sm" | "m
         )}
         <div className="absolute inset-x-0 bottom-0 p-6 md:p-8 z-10 bg-gradient-to-t from-background/85 via-background/40 to-transparent">
           <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-gold">{p.location}</p>
-          <h3 className="font-display text-3xl md:text-5xl text-cream mt-2 leading-none">{p.title}</h3>
+          <h3 className="font-display text-3xl md:text-5xl text-cream mt-2 leading-none">
+            {p.title}
+          </h3>
           <p className="font-mono text-xs text-cream/80 mt-3 tracking-wider">{p.price}</p>
         </div>
       </div>
