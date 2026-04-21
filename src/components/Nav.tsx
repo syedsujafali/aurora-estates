@@ -26,27 +26,27 @@ export function Nav() {
       <div className="mx-auto flex max-w-[1500px] items-center justify-between px-6 md:px-12">
         <Link to="/" className="group flex items-baseline gap-3">
           <span className="font-display text-3xl tracking-tight text-cream">Allure</span>
-          <span className="hidden sm:inline font-mono text-xs uppercase tracking-[0.35em] text-gold">
+          <span className="hidden lg:inline font-mono text-xs uppercase tracking-[0.35em] text-gold">
             Properties Group
           </span>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-12">
+        <nav className="hidden md:flex items-center gap-6 xl:gap-12">
           {links.map((l, i) => (
             <Link
               key={l.to}
               to={l.to}
               activeOptions={{ exact: l.to === "/" }}
-              className="font-mono text-sm uppercase tracking-[0.25em] text-cream/80 hover:text-cream ed-link"
+              className="font-mono text-[11px] lg:text-sm uppercase tracking-[0.15em] lg:tracking-[0.25em] text-cream/80 hover:text-cream ed-link"
               activeProps={{ className: "text-oxide" }}
             >
-              <span className="text-gold mr-2">0{i + 1}</span>
+              <span className="text-gold mr-1.5 lg:mr-2">0{i + 1}</span>
               {l.label}
             </Link>
           ))}
         </nav>
 
-        <div className="hidden md:block font-mono text-sm uppercase tracking-[0.25em] text-cream/70">
+        <div className="hidden lg:block font-mono text-sm uppercase tracking-[0.25em] text-cream/70 text-right">
           973.823.0593
         </div>
 
