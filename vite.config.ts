@@ -1,14 +1,23 @@
-import { defineConfig } from "@lovable.dev/vite-tanstack-config";
-
-if (process.env.NODE_ENV === "production") {
-  process.env.NITRO_PRESET = "vercel";
-}
+import { defineConfig } from "vite";
+import { tanstackStart } from "@tanstack/react-start/plugin/vite";
+import react from "@vitejs/plugin-react";
+import tsconfigPaths from "vite-tsconfig-paths";
+import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-  cloudflare: false,
-  tanstackStart: {
-    server: {
-      preset: "vercel",
+  plugins: [
+    tanstackStart({
+      server: {
+        preset: "vercel",
+      },
+    }),
+    react(),
+    tailwindcss(),
+    tsconfigPaths(),
+  ],
+  resolve: {
+    alias: {
+      "@": "/src",
     },
   },
 });
